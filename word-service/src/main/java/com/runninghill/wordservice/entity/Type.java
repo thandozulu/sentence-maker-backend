@@ -1,12 +1,13 @@
 package com.runninghill.wordservice.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Word {
+public class Type {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,8 +25,7 @@ public class Word {
     @Column
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "type_id")
-    private Type type;
+    @OneToMany(mappedBy = "type")
+    private List<Word> word;
 
 }
