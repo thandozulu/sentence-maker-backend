@@ -2,6 +2,8 @@ package com.runninghill.wordservice.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,6 +28,7 @@ public class Type {
     private String name;
 
     @OneToMany(mappedBy = "type")
+    @JsonIgnore
     private List<Word> word;
 
 }

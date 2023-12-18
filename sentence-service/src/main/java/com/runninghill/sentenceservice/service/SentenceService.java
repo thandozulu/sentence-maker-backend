@@ -11,4 +11,6 @@ public interface SentenceService {
 
     List<Sentence> findAll();
 
+    Sentence save(Sentence sentence);
+
 }

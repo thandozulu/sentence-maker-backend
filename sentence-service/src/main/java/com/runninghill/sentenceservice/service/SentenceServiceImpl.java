@@ -18,5 +18,10 @@ public class SentenceServiceImpl implements SentenceService{
     public List<Sentence> findAll() {
         return sentenceRepository.findAll();
     }
+
+    @Override
+    public Sentence save(Sentence sentence) {
+        return sentenceRepository.save(sentence);
+    }
     
 }
