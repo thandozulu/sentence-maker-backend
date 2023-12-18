@@ -22,17 +22,14 @@ public class SentenceController {
     private SentenceService sentenceService;
 
     @GetMapping("/")
-    @ResponseStatus(HttpStatus.FOUND)
     public List<Sentence> findAll() {
         return sentenceService.findAll();
     }
 
     @PostMapping("/create")
-    @ResponseStatus(HttpStatus.CREATED)
     public Sentence createSentence(@RequestBody String sentence) {
         Sentence newSentence = Sentence.builder().content(sentence).build();
         return sentenceService.save(newSentence);
     }
-    
 
 }

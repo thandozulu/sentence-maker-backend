@@ -13,5 +13,7 @@ public interface WordService {
     public List<Word> findByType(Type type);
 
     public List<Word> findByTypeId(Long id);
+
+    public List<Type> findTypes();
     
 }
