@@ -13,4 +13,6 @@ public interface SentenceService {
 
     Sentence save(Sentence sentence);
 
+    void deleteAll();
+
 }

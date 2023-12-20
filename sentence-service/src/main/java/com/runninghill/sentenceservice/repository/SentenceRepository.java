@@ -7,5 +7,4 @@ import com.runninghill.sentenceservice.entity.Sentence;
 
 @Repository
 public interface SentenceRepository extends JpaRepository<Sentence, Long> {
-
 }

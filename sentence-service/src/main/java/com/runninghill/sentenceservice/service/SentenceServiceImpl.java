@@ -23,5 +23,10 @@ public class SentenceServiceImpl implements SentenceService{
     public Sentence save(Sentence sentence) {
         return sentenceRepository.save(sentence);
     }
+
+    @Override
+    public void deleteAll() {
+        sentenceRepository.deleteAll();
+    }
     
 }
